@@ -1,0 +1,225 @@
+/* style.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('background_image.jpg');
+    z-index: -1;
+}
+
+#switches {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    opacity: 0.99;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#profile-photo {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#name-title {
+    flex-grow: 1;
+}
+
+#skills, #projects, #contact {
+    margin-top: 20px;
+}
+
+#carousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+#carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+#carousel::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+#carousel::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+#carousel a {
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+
+#carousel a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#carousel img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+body.dark-theme #carousel a {
+    border-color: #555;
+}
+
+#contact img {
+    width: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+#skills img{
+    width: 40px;
+}
+
+#projects img{
+    width: 90%;
+}
+
+
+/* Dark Theme */
+
+body.dark-theme {
+    color: white;
+}
+
+body.dark-theme #container {
+    background-color: #333;
+    color: #ddd;
+}
+
+body.dark-theme #carousel a {
+    color: #ddd;
+    border-color: #555;
+}
+
+body.dark-theme #carousel a:hover {
+    background-color: #444;
+}
+
+#skills .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#skills .skill p {
+    width: 100px;
+}
+
+.skill-level {
+    display: flex;
+    width: 100px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level:before {
+    content: '';
+    
+    border-radius: 10px;
+}
+
+
+
+.skill-level[data-level="3"]:before {
+    background: #f3bb21;
+    width: 60%;
+}
+
+.skill-level[data-level="4"]:before {
+    background: #f33a21;
+    width: 80%;
+}
+
+.skill-level[data-level="5"]:before {
+    background: #2136f3;
+    width: 80%;
+}
+
+
+
+
+
+
+
