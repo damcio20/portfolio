@@ -176,7 +176,6 @@ body.dark-theme #carousel a:hover {
 }
 
 #skills .skill {
-    display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
